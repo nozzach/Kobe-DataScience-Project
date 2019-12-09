@@ -60,9 +60,8 @@ data %>%
   group_by(season) %>%
   summarise(Accuracy=mean(shot_made_flag == 1)) %>%
   ggplot(aes(x=season, y=Accuracy, group=1)) +
-  geom_line(aes(colour=Accuracy)) +
   geom_point(aes(colour=Accuracy)) +
   scale_colour_gradient(low="red", high="green") +
   labs(title="Field goal % by season", x="Season", y = "Field goal %")+
-  theme(text = element_text(size=10),axis.text.x = element_text(angle = 45, hjust = 1))
+  theme(text = element_text(size=9),axis.text.x = element_text(angle = 45, hjust = 1))
 
