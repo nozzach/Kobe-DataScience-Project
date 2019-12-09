@@ -20,7 +20,7 @@ data %>%
 
 # Frequency for each shot zone range
 data %>%
-  ggplot(aes(x=fct_infreq(shot_zone_range))) + 
+  ggplot(aes(x=fct_inorder(shot_zone_range))) + 
   geom_bar(aes(fill=shot_zone_range)) +
   labs(title = 'Shots taken by zone range', y="Frequency", x="shot range")+
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
